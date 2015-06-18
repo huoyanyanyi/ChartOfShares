@@ -7,13 +7,11 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Vector;
 
 import javax.swing.JPanel;
 
 import com.chart.dao.DataDao;
 import com.chart.modle.Data;
-import com.chart.modle.Share;
 
 public class MyPanel extends JPanel {
 	private ArrayList<Data> datas;
@@ -34,7 +32,7 @@ public class MyPanel extends JPanel {
 		int y4 = 0;
 		int y5 = 0;
 		int y6 = 0;
-		this.setBackground(new Color(10,10,10));
+		this.setBackground(new Color(0,0,0));
 		try {
 			datas = dataDao.initDatas(MainView.code);
 //			datas = dataDao.initDatas("000875");

@@ -33,9 +33,9 @@ private BufferedReader br;
 		
 		String line;
 		line = br.readLine();
-		int i = 0;
+//		int i = 0;
 		while ( (line = br.readLine()) != null ) {
-			i++;
+//			i++;
 			Data data = new Data();
 			String[] info = line.split(",");
 			Code = code;									//股票代码
@@ -72,7 +72,7 @@ private BufferedReader br;
 			turnover = Double.parseDouble(info[14].trim());			//换手率	
 			data.setTurnover(turnover);
 			data.init();
-			String dateT = sdf.format(data.getDate());
+//			String dateT = sdf.format(data.getDate());
 //			System.out.println(data.getCode()+" "+dateT+" "+data.getOpen()+" "+data.getHigh()
 //					+" "+data.getClose()+" "+data.getLow()+" "+data.getVolume()			
 //					+" "+data.getPrice_change()+" "+data.getP_change()+" "+data.getMa5()
