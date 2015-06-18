@@ -2,8 +2,6 @@ package com.chart.view;
 
 import java.awt.Color;
 import java.awt.EventQueue;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -15,6 +13,9 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.event.InternalFrameEvent;
 import javax.swing.event.InternalFrameListener;
+
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class MainView extends JFrame{
 	private static final long serialVersionUID = 5161973908482185238L;
@@ -77,22 +78,13 @@ public class MainView extends JFrame{
 		exit.setIcon(new ImageIcon("icons/exit.png"));
 		menuBar.add(exit);
 		JButton paqu = new JButton();
-		paqu.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
-				PaquFrm paquFrm = new PaquFrm();	
-				paquFrm.setLocation(120, 120);
-				paquFrm.toFront();
-				table.add(paquFrm);
-				paquFrm.setVisible(true);
-			}
-		});
 		paqu.setIcon(new ImageIcon("icons/network.png"));
 		menuBar.add(paqu);
-		
-		
 		JButton jbtuxing = new JButton();	
 		jbtuxing.setIcon(new ImageIcon("icons/xuxian.png"));
+		
+		
+		
 		jbtuxing.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(code != null){
@@ -109,17 +101,15 @@ public class MainView extends JFrame{
 		});
 		
 		menuBar.add(jbtuxing);
-		
-		
 		JButton home = new JButton();
 		home.setIcon(new ImageIcon("icons/home.png"));
+		
+		
 		home.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(lsa == false){
 					lsa = true;
 					ListAllFrm listAllFrm = new ListAllFrm();
-					listAllFrm.setLocation(10, 10);
-					listAllFrm.toFront();
 					table.add(listAllFrm);
 					listAllFrm.setVisible(true);
 					listAllFrm.addInternalFrameListener(new InternalFrameListener() {
@@ -180,31 +170,19 @@ public class MainView extends JFrame{
 //		JButton shezhi = new JButton();
 //		shezhi.setIcon(new ImageIcon("icons/reference.png"));
 //		menuBar.add(shezhi);
+		JButton shuaxin = new JButton();
+		shuaxin.setIcon(new ImageIcon("icons/refrush.png"));
+		menuBar.add(shuaxin);
 		
-//		JButton shuaxin = new JButton();
-//		shuaxin.setIcon(new ImageIcon("icons/refrush.png"));
-//		menuBar.add(shuaxin);
-//		
-//		JButton search = new JButton();
-//		search.setIcon(new ImageIcon("icons/search.png"));
-//		menuBar.add(search);
+		JButton search = new JButton();
+		search.setIcon(new ImageIcon("icons/search.png"));
+		menuBar.add(search);
 		
 //		JButton shanxing = new JButton();
 //		shanxing.setIcon(new ImageIcon("icons/shanxing.png"));
 //		menuBar.add(shanxing);
-		
 		JButton data = new JButton();
 		data.setIcon(new ImageIcon("icons/data.png"));
-		data.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				DataFrm dataFrm = new DataFrm();	
-				dataFrm.setLocation(120, 120);
-				dataFrm.toFront();
-				table.add(dataFrm);
-				dataFrm.setVisible(true);
-				
-			}
-		});
 		menuBar.add(data);
 		
 //		JButton zhuzhuang = new JButton();
@@ -212,20 +190,8 @@ public class MainView extends JFrame{
 //		menuBar.add(zhuzhuang);
 		
 		JButton about = new JButton();
-		about.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				AboutFrm aboutFrm = new AboutFrm();	
-				aboutFrm.setLocation(120, 120);
-				aboutFrm.toFront();
-				table.add(aboutFrm);
-				aboutFrm.setVisible(true);
-				
-			}
-		});
 		about.setIcon(new ImageIcon("icons/info.png"));
-		menuBar.add(about);	
-		
-		
+		menuBar.add(about);		
 		table = new JDesktopPane();
 		table.setBackground(Color.LIGHT_GRAY);
 		table.setBounds(0, 60, 1049, 618);

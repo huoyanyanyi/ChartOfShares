@@ -7,11 +7,6 @@ import javax.swing.JInternalFrame;
 public class DataFrm extends JInternalFrame {
 
 	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -3282258914695899083L;
-
-	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {

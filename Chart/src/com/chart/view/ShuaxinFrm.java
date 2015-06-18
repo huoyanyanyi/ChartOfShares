@@ -4,7 +4,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JInternalFrame;
 
-public class PaquFrm extends JInternalFrame {
+public class ShuaxinFrm extends JInternalFrame {
 
 	/**
 	 * Launch the application.
@@ -13,7 +13,7 @@ public class PaquFrm extends JInternalFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					PaquFrm frame = new PaquFrm();
+					ShuaxinFrm frame = new ShuaxinFrm();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -25,7 +25,7 @@ public class PaquFrm extends JInternalFrame {
 	/**
 	 * Create the frame.
 	 */
-	public PaquFrm() {
+	public ShuaxinFrm() {
 		setBounds(100, 100, 450, 300);
 
 	}

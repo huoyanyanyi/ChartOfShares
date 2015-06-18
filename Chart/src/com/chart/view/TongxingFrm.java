@@ -1,8 +1,10 @@
 package com.chart.view;
 
+import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Label;
 import javax.swing.JInternalFrame;
+import javax.swing.border.TitledBorder;
 
 public class TongxingFrm extends JInternalFrame {
 
@@ -35,6 +37,10 @@ public class TongxingFrm extends JInternalFrame {
 		
 		Label label = new Label("         "+"code = "+MainView.code +"   "+"标注：黄色为五日均线，绿色为十日均线，橙色为二十日均线");
 		label.setBounds(12, 509, 814, 40);
+		
+		
+		
+		getContentPane().add(label);
 		getContentPane().add(label);
 		MyPanel panel = new MyPanel();
 		panel.setBounds(12, 12, 814, 490);

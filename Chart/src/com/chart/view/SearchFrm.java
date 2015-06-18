@@ -4,7 +4,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JInternalFrame;
 
-public class PaquFrm extends JInternalFrame {
+public class SearchFrm extends JInternalFrame {
 
 	/**
 	 * Launch the application.
@@ -13,7 +13,7 @@ public class PaquFrm extends JInternalFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					PaquFrm frame = new PaquFrm();
+					SearchFrm frame = new SearchFrm();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -25,7 +25,7 @@ public class PaquFrm extends JInternalFrame {
 	/**
 	 * Create the frame.
 	 */
-	public PaquFrm() {
+	public SearchFrm() {
 		setBounds(100, 100, 450, 300);
 
 	}
