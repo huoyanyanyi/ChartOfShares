@@ -91,24 +91,7 @@ public class MainView extends JFrame{
 		menuBar.add(paqu);
 		
 		
-		JButton jbtuxing = new JButton();	
-		jbtuxing.setIcon(new ImageIcon("icons/xuxian.png"));
-		jbtuxing.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if(code != null){
-				TongxingFrm tuxing = new TongxingFrm();	
-				tuxing.setLocation(10, 10);
-				tuxing.toFront();
-				table.add(tuxing);
-				tuxing.setVisible(true);
-				}else{
-					JOptionPane.showMessageDialog(null, "先选择具体的一只股票", null,
-							JOptionPane.DEFAULT_OPTION);
-				}
-			}
-		});
 		
-		menuBar.add(jbtuxing);
 		
 		
 		JButton home = new JButton();
@@ -175,7 +158,24 @@ public class MainView extends JFrame{
 		});
 		menuBar.add(home);
 		
+		JButton jbtuxing = new JButton();	
+		jbtuxing.setIcon(new ImageIcon("icons/xuxian.png"));
+		jbtuxing.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(code != null){
+				TongxingFrm tuxing = new TongxingFrm();	
+				tuxing.setLocation(10, 10);
+				tuxing.toFront();
+				table.add(tuxing);
+				tuxing.setVisible(true);
+				}else{
+					JOptionPane.showMessageDialog(null, "先选择具体的一只股票", null,
+							JOptionPane.DEFAULT_OPTION);
+				}
+			}
+		});
 		
+		menuBar.add(jbtuxing);
 
 //		JButton shezhi = new JButton();
 //		shezhi.setIcon(new ImageIcon("icons/reference.png"));

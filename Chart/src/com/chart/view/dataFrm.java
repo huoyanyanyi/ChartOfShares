@@ -3,10 +3,7 @@ package com.chart.view;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.EventQueue;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import java.io.IOException;
-import java.sql.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -22,9 +19,7 @@ import javax.swing.border.TitledBorder;
 import javax.swing.table.DefaultTableModel;
 
 import com.chart.dao.DataDao;
-import com.chart.dao.ShareDao;
 import com.chart.modle.Data;
-import com.chart.modle.Share;
 
 public class DataFrm extends JInternalFrame {
 
@@ -60,8 +55,7 @@ public class DataFrm extends JInternalFrame {
 		setBounds(100, 100, 860, 600);
 		getContentPane().setLayout(null);
 		JPanel panel = new JPanel();
-		panel.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null), 
-				"\u4ECA\u65E5\u80A1\u7968", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
+		panel.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null), "\u80A1\u7968\u5177\u4F53\u8BB0\u5F55", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
 		panel.setBounds(28, 18, 782, 515);
 		getContentPane().add(panel);
 		panel.setLayout(null);
@@ -96,7 +90,9 @@ public class DataFrm extends JInternalFrame {
 		java.util.Iterator<Data> it = datas.iterator();	
 		while (it.hasNext()) {
 			Vector<String> dataVector = new Vector<String>();
-			Data data= (Data)it.next();
+			Data data = (Data)it.next();
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+			dataVector.add(sdf.format(data.getDate()));
 			dataVector.add(""+data.getOpen());
 			dataVector.add(""+data.getClose());
 			dataVector.add(""+data.getHigh());
