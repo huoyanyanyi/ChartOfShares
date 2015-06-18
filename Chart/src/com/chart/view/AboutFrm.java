@@ -3,13 +3,14 @@ package com.chart.view;
 import java.awt.EventQueue;
 
 import javax.swing.JInternalFrame;
+import javax.swing.border.TitledBorder;
 
-public class DataFrm extends JInternalFrame {
+public class AboutFrm extends JInternalFrame {
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -3282258914695899083L;
+	private static final long serialVersionUID = -6191427806587924168L;
 
 	/**
 	 * Launch the application.
@@ -18,7 +19,7 @@ public class DataFrm extends JInternalFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					DataFrm frame = new DataFrm();
+					AboutFrm frame = new AboutFrm();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -30,8 +31,15 @@ public class DataFrm extends JInternalFrame {
 	/**
 	 * Create the frame.
 	 */
-	public DataFrm() {
+	public AboutFrm() {
+		setTitle("关于");
+		setIconifiable(true);
+		setClosable(true);
 		setBounds(100, 100, 450, 300);
+		getContentPane().setLayout(null);
+		MyPanel2 panel = new MyPanel2();
+		panel.setBounds(20, 16, 388, 221);
+		getContentPane().add(panel);
 
 	}
 
