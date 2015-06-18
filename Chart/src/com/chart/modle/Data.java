@@ -22,10 +22,11 @@ public class Data {
 	private double turnover;			//换手率
 	private double lengthOfHL;
 	private double lengthOfOP;
-	private boolean yingyang;
 	
 	
 	
+
+
 	public String getCode() {
 		return code;
 	}
@@ -39,10 +40,7 @@ public class Data {
 		lengthOfOP = open - close;
 		if(lengthOfOP < 0){
 			lengthOfOP = 0 - lengthOfOP;
-			yingyang = false;
-		}else{
-			yingyang = true;
-		}	
+		}
 	}
 	
 	public double getLengthOfHL() {
@@ -54,13 +52,6 @@ public class Data {
 		init();
 		return lengthOfOP;
 	}
-
-
-	public boolean isYingyang() {
-		init();
-		return yingyang;
-	}
-
 	public Date getDate() {
 		return date;
 	}

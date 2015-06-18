@@ -73,7 +73,7 @@ public class MainView extends JFrame{
 		jbtuxing.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(code != null){
-				TongxingFrm tuxing = new TongxingFrm(code);	
+				TongxingFrm tuxing = new TongxingFrm();	
 				tuxing.setLocation(10, 10);
 				tuxing.toFront();
 				table.add(tuxing);

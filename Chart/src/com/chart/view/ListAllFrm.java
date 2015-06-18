@@ -73,6 +73,7 @@ public class ListAllFrm extends JInternalFrame {
 		DefaultTableModel defaultTableModel = new DefaultTableModel();
 		defaultTableModel.addColumn("Code");
 		defaultTableModel.addColumn("Open");
+		defaultTableModel.addColumn("CLOSE");
 		defaultTableModel.addColumn("High");
 		defaultTableModel.addColumn("Low");
 		

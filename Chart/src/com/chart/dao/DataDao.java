@@ -73,14 +73,14 @@ private BufferedReader br;
 			data.setTurnover(turnover);
 			data.init();
 			String dateT = sdf.format(data.getDate());
-			System.out.println(data.getCode()+" "+dateT+" "+data.getOpen()+" "+data.getHigh()
-					+" "+data.getClose()+" "+data.getLow()+" "+data.getVolume()			
-					+" "+data.getPrice_change()+" "+data.getP_change()+" "+data.getMa5()
-					+" "+data.getMa10()+" "+data.getMa20()+" "+data.getV_ma5()
-					+" "+data.getV_ma10()+" "+data.getV_ma20()+" "+data.getTurnover()
-					+" "+data.getLengthOfHL()+" "+data.getLengthOfHL());
-			
-			System.out.println("--"+i+"\n");
+//			System.out.println(data.getCode()+" "+dateT+" "+data.getOpen()+" "+data.getHigh()
+//					+" "+data.getClose()+" "+data.getLow()+" "+data.getVolume()			
+//					+" "+data.getPrice_change()+" "+data.getP_change()+" "+data.getMa5()
+//					+" "+data.getMa10()+" "+data.getMa20()+" "+data.getV_ma5()
+//					+" "+data.getV_ma10()+" "+data.getV_ma20()+" "+data.getTurnover()
+//					+" "+data.getLengthOfHL()+" "+data.getLengthOfHL());
+//			
+//			System.out.println("--"+i+"\n");
 			
 			datas.add(data);
 		}
